@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import api from "../../util/services/api";
+import Button from "@material-ui/core/Button";
 
 // type FormData = {
 //   collectionID: number,
@@ -59,7 +60,10 @@ export default function AddProduct() {
       <input type="checkbox" {...register("isAvailable")} id="isAvailable" />
       <br />
 
-      <button type="submit">Submit</button>
+      <Button type="submit" variant="contained" color="secondary">
+        Submit
+      </Button>
+      {/* <button type="submit">Submit</button> */}
     </form>
   );
 }
