@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap-social/bootstrap-social.css";
+
 import './index.css';
+import "./util/styles/navbar.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
