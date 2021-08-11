@@ -32,6 +32,7 @@ function Main(props) {
           <Switch>
             <Route path="/home" component={Homepage} />
             <Route path="/products/addNew" component={AddProductPage} />
+            <Redirect to="/home" />
           </Switch>
         </CSSTransition>
       </SwitchTransition>

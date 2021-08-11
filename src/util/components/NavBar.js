@@ -2,16 +2,21 @@
 
 export default function NavBar(props) {
     return (
-        <div>
-            <ul className="navbar-ul">
-                <li className="navbar-li"><a className="navbar-a" href="#">Home</a></li>
+        <nav className="navbar navbar-dark bg-dark">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
             </ul>
-            <ul className="navbar-ul">
-                <li className="navbar-li"><a className="navbar-a" href="#">Collections</a></li>
-            </ul>
-            <ul className="navbar-ul">
-                <li className="navbar-li"><a className="navbar-a" href="#">About</a></li>
-            </ul>
-        </div>
+        </nav >
     )
 }

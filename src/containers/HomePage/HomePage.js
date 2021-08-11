@@ -11,29 +11,37 @@ export default function HomePage() {
     });
   };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-  return (
-    <div>
-      <table>
-        <tr>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Description</th>
-        </tr>
-
-        {products.map((product) => {
-          const { productName, price, productDescription } = product;
-          return (
-            <tr>
-              <td>{productName}</td>
-              <td>{price}</td>
-              <td>{productDescription}</td>
-            </tr>
-          );
-        })}
-      </table>
-    </div>
-  );
+    useEffect(() => {
+        getProducts();
+    }, []);
+    return (
+        <div className="container">
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {products.map((product) => {
+                        const {
+                            productID,
+                            productName,
+                            price,
+                            productDescription
+                        } = product;
+                        return (
+                            <tr key={productID}>
+                                <td>{productName}</td>
+                                <td>{price}</td>
+                                <td>{productDescription}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
+        </div>
+    );
 }
