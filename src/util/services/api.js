@@ -127,6 +127,26 @@ export default {
     return deleteApi(`/orderItems/${id}`);
   },
 
+  //Image
+  getAllImages() {
+    return getApi(`/images`);
+  },
+  getImageByID(id) {
+    return getApi(`/images/${id}`);
+  },
+  getImagesByProductID(productID) {
+    return getApi(`/images/product/${productID}`);
+  },
+  createImage(image) {
+    return postApi(`/images`, image);
+  },
+  updateImage(id, image) {
+    return putApi(`/images/${id}`, image);
+  },
+  deleteImage(id) {
+    return deleteApi(`/images/${id}`);
+  },
+
   // SIZE_IN_PRODUCT
   getAllSizeInProducts() {
     return getApi(`/sizeInProducts`);

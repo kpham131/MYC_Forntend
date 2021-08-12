@@ -4,6 +4,7 @@ import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import HomePage from "../containers/HomePage/HomePage";
 import AddProduct from "../containers/AddPages/AddProduct";
+import Products from "../containers/ProductPage/Products";
 // eslint-disable-next-line no-unused-vars
 function Main(props) {
   const AddProductPage = () => {
@@ -15,6 +16,17 @@ function Main(props) {
       </>
     );
   };
+
+  const ProductsPage = () => {
+    return (
+      <>
+        <NavBar />
+        <Products />
+        <Footer />
+      </>
+    );
+  };
+
   const Homepage = () => {
     return (
       <>
@@ -32,6 +44,7 @@ function Main(props) {
           <Switch>
             <Route path="/home" component={Homepage} />
             <Route path="/products/addNew" component={AddProductPage} />
+            <Route path="/products" component={ProductsPage} />
           </Switch>
         </CSSTransition>
       </SwitchTransition>
