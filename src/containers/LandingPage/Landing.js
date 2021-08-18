@@ -1,6 +1,7 @@
+import React from "react";
 import { flexbox } from "@material-ui/system";
 import { Typography, Grid } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
+import { ThemeProvider, makeStyles } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core/styles";
 // import Montserrat from "../../util/styles/fonts/Montserrat-ExtraBold.tff";
 export default function Landing() {
@@ -10,106 +11,82 @@ export default function Landing() {
       fontFamily: "Montserrat",
     },
   });
+  const useStyles = makeStyles({
+    general: {
+      textAlign: "center",
+      whiteSpace: "pre",
+      
+    },
+    MYC: {
+      variant: "h2",
+      fontSize: "5vw",
+      paddingTop: "4vw",
+    },
+    other:{
+      variant:"h3",
+      fontSize: "3.5vw"
+    }
+  });
+  const classes = useStyles();
+
   return (
     <Grid container spacing={0}>
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography variant="h2" className="pt-5" align="center">
-              MISSED YOUR CALL
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography className={classes.general + " " + classes.MYC}>
+          M I S S E D Y O U R C A L L
+        </Typography>
       </Grid>
-      <Grid item xs={6}>
+
+      {/* <Grid item xs={6}>
         <flexbox>...</flexbox>
       </Grid>
       <Grid item xs={6}>
         <flexbox>Agency</flexbox>
-      </Grid>
+      </Grid> */}
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-3"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              E S T 2 0 1 9
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography className={classes.general + " " + classes.other}>
+          E S T 2 0 1 9
+        </Typography>
       </Grid>
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-5"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              - Welcome to your choice -
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography className={classes.general + " " + classes.other}>
+          - Welcome to your choice -
+        </Typography>
       </Grid>
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-5"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              _____________
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography className={classes.general + " " + classes.other}>
+          _____________
+        </Typography>
       </Grid>
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-1 pb-0"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              Public Store
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography
+          className={classes.general + " " + classes.other}
+          style={{ paddingTop: "2vw" }}
+        >
+          <a href="home" style={{ color: "black", textDecoration: "none" }}>
+            Public Store
+          </a>
+        </Typography>
       </Grid>
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-1"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              _____________
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography className={classes.general + " " + classes.other}>
+          _____________
+        </Typography>
       </Grid>
+
       <Grid item xs={12}>
-        <flexbox>
-          <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              className="pt-2"
-              align="center"
-              style={{ whiteSpace: "pre" }}
-            >
-              Design Your Own
-            </Typography>
-          </ThemeProvider>
-        </flexbox>
+        <Typography
+          className="pt-2"
+          className={classes.general + " " + classes.other}
+          style={{ paddingTop: "2vw" }}
+        >
+          Design Your Own
+        </Typography>
       </Grid>
     </Grid>
   );
