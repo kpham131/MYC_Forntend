@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import React from "react";
 import { useState, useEffect } from "react";
-import Product from "../../util/components/Product";
+import ProductCard from "../../util/components/ProductCard";
 
 import api from "../../util/services/api";
 
@@ -21,7 +21,7 @@ export default function Products() {
   return (
     <div>
       {products.map((product) => {
-        return <Product product={product} key={product.productID} />;
+        return <ProductCard product={product} key={product.productID} />;
       })}
     </div>
   );

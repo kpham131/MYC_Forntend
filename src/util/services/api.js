@@ -45,6 +45,9 @@ export default {
   getAllProduct() {
     return getApi(`/products`);
   },
+  getSizeInProductByProductID(id){
+    return getApi(`/products/${id}/sizeInProduct`);
+  },
   createProduct(product) {
     return postApi(`/products`, product);
   },

@@ -4,8 +4,10 @@ import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import HomePage from "../containers/HomePage/HomePage";
 import AddProduct from "../containers/AddPages/AddProduct";
-import Products from "../containers/ProductPage/Products";
+import Products from "../containers/ProductsPage/Products";
 import Landing from "../containers/LandingPage/Landing";
+import Product from "../containers/ProductPage/Product"
+
 // eslint-disable-next-line no-unused-vars
 function Main(props) {
   const LandingPage = () => {
@@ -50,7 +52,8 @@ function Main(props) {
             <Route exact path="/" component={LandingPage} />
             <Route path="/home" component={Homepage} />
             <Route path="/products/addNew" component={AddProductPage} />
-            <Route path="/products" component={ProductsPage} />
+            <Route exact path="/products" component={ProductsPage} />
+            <Route path="/products/:id" component={Product}/>
           </Switch>
         </CSSTransition>
       </SwitchTransition>

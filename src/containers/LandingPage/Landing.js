@@ -1,31 +1,27 @@
 import React from "react";
 import { flexbox } from "@material-ui/system";
 import { Typography, Grid } from "@material-ui/core";
-import { ThemeProvider, makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core/styles";
 // import Montserrat from "../../util/styles/fonts/Montserrat-ExtraBold.tff";
 export default function Landing() {
   document.body.style = "background:cyan";
-  const theme = createTheme({
-    typography: {
-      fontFamily: "Montserrat",
-    },
-  });
+
   const useStyles = makeStyles({
     general: {
       textAlign: "center",
       whiteSpace: "pre",
-      
+      fontFamily: "Montserrat",
     },
     MYC: {
       variant: "h2",
       fontSize: "5vw",
       paddingTop: "4vw",
     },
-    other:{
-      variant:"h3",
-      fontSize: "3.5vw"
-    }
+    other: {
+      variant: "h3",
+      fontSize: "3.5vw",
+    },
   });
   const classes = useStyles();
 
@@ -33,7 +29,7 @@ export default function Landing() {
     <Grid container spacing={0}>
       <Grid item xs={12}>
         <Typography className={classes.general + " " + classes.MYC}>
-          M I S S E D Y O U R C A L L
+          M I S S E D   Y O U R   C A L L
         </Typography>
       </Grid>
 
@@ -46,7 +42,7 @@ export default function Landing() {
 
       <Grid item xs={12}>
         <Typography className={classes.general + " " + classes.other}>
-          E S T 2 0 1 9
+          E S T   2 0 1 9
         </Typography>
       </Grid>
 
